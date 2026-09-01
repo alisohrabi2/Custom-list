@@ -64,3 +64,13 @@ body {
     margin-left: 10px;
 
 }
+
+.container .list .rank::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #262626;
+    border-radius: 50%;
+    transform: scale(1);
+}
