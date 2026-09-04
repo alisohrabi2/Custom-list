@@ -38,24 +38,25 @@ body {
     position: relative;
 }
 
+/* red circle  */
 .container .list::after {
     content: "";
     width: 40px;
     height: 40px;
     background-color: red;
-    border-radius: 50%;
+    border-radius: 50px;
     position: absolute;
     top: 0;
     right: 0;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
         inset 2px 2px 5px rgba(0, 0, 0, 0.25),
         inset -3px -3px 5px rgba(0, 0, 0, 0.5);
-
+    transition: 0.5s;
 }
 
 .container .list .rank {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -65,12 +66,36 @@ body {
 
 }
 
+/* Gray circle  */
 .container .list .rank::after {
     content: "";
     position: absolute;
     width: 35px;
     height: 35px;
-    background-color: #262626;
+    background-color: #2f363e;
     border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.text {
+    color: #fff;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.container .list:hover .rank::after {
     transform: scale(1);
+    z-index: 1;
+}
+
+.container .list:hover .rank span {
+    color: #fff;
+    font-size: 25px;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.container .list:hover::after {
+    width: 100%;
 }
